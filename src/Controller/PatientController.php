@@ -12,8 +12,9 @@ class PatientController extends AbstractController
     #[Route('/', name: 'app_patient')]
     public function index(PatientRepository $patientRepository): Response
     {
-        return $this->render('patient/index.html.twig', [
-            'patients'=>$patientRepository->findAll(),
+        $patients = $patientRepository->findAll();
+        return $this->render('patient/index.html.twig', [            
+            'patients'=>$patients
         ]);
     }
 }

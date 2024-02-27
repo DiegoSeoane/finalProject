@@ -22,19 +22,13 @@ class Patient
     #[ORM\Column(length: 255)]
     private ?string $address = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $speciality = null;
+    #[ORM\ManyToOne(inversedBy: 'id_Speciality')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Speciality $speciality = null;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function setId(int $id): static
-    {
-        $this->id = $id;
-
-        return $this;
     }
 
     public function getName(): ?string
@@ -73,12 +67,12 @@ class Patient
         return $this;
     }
 
-    public function getSpeciality(): ?string
+    public function getSpeciality(): ?Speciality
     {
         return $this->speciality;
     }
 
-    public function setSpeciality(string $speciality): static
+    public function setSpeciality(?Speciality $speciality): static
     {
         $this->speciality = $speciality;
 
