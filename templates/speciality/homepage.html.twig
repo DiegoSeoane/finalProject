@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SpecialityController!{% endblock %}
+{% block title %}{{ parent() }}{% endblock %}
 
 {% block body %}
-
-<div class="container">        
-
+<div class="container-fluid">        
+<div class="row m-auto d-flex justify-content-around">
 {% for speciality in specialities %}
-<div class="card col-4">
+
+<div class="card col-sm-5 mb-4 text-center p-2">
 <div class="card-body">
         <h1 class="card-title">{{ speciality.SpecialityName }}</h1>
 </div>
 </div>
+
 {% endfor %}
+</div>
 </div>
 {% endblock %}

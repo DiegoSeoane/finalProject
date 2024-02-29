@@ -14,14 +14,6 @@ class SpecialityController extends AbstractController
     #[Route('/homepage', name: 'app_speciality')]
     public function index(SpecialityRepository $specialityRepository, EntityManagerInterface $entityManager): Response
     {
-        // $array = ['Cardiology', 'Ophtalmology', 'Otorhinolaryngology', 'Psychology', 'Psychiatry'];
-        // foreach ($array as $name) {            
-        //   $speciality = new Speciality;          
-        //   $speciality->setSpecialityName($name);
-        //   $entityManager->persist($speciality);
-        // }                      
-        
-        // $entityManager->flush(); 
         return $this->render('speciality/homepage.html.twig', [
             'specialities' =>$specialityRepository->findAll(),            
         ]);
