@@ -5,7 +5,20 @@
 {% block body %}
 
 
-<h1>Central Hospital Baroja</h1>
+<h1 class="text-center display-3">{{name}}</h1>
+<div id="carouselSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active w-60">
+      <img src="./images/medicos.jpg" class="d-block d-block mx-auto" alt="Doc">
+    </div>
+    <div class="carousel-item w-60">
+      <img src="./images/hospital.jpg" class="d-block  d-block mx-auto" alt="Hospital">
+    </div>
+    <div class="carousel-item w-60">
+      <img src="./images/vacuna.jpg" class="d-block d-block mx-auto" alt="Vaccine">
+    </div>
+  </div>
+</div>
 
 <h2></h2>
 {% endblock %}

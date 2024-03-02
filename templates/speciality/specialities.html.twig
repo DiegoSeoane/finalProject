@@ -7,11 +7,11 @@
 <div class="row m-auto d-flex justify-content-around">
 {% for speciality in specialities %}
 
-<div class="card col-sm-5 mb-4 text-center p-2">
+<a href="/specialities/{{speciality.SpecialityName}}" class="card col-sm-5 mb-4 text-center p-2 text-decoration-none bg-dark text-light">
 <div class="card-body">
-        <h1 class="card-title">{{ speciality.SpecialityName }}</h1>
+        <h1 class="card-title">{{ speciality.SpecialityName }}</h1>        
 </div>
-</div>
+</a>
 
 {% endfor %}
 </div>

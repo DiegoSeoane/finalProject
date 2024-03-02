@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<form class="col-3 col-lg-3 mb-3 mx-auto">
+		<input type="search" class="form-control form-control-dark" placeholder="Search by name" aria-label="Search">
+	</form>
+
+	<div class="list-group w-50 mx-auto p-fixed">
+		{% for patient in list %}
+			<a href="/patient/{{patient.id}}" type="button" class="list-group-item list-group-item-action text-center">
+				<div class="d-flex justify-content-around">
+					<span>
+						<b>Name:
+						</b>
+						{{patient.name}}
+						{{patient.surname}}</span>
+					<span>
+						<b>Specialty:
+						</b>
+						{{patient.speciality.getSpecialityName()}}</span>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+
+	{% block javascript %}
+		<script defer>
+			document.addEventListener("DOMContentLoaded", function () {
+const searchInput = document.querySelector('.form-control');
+
+const patientItems = document.querySelectorAll('.list-group-item');
+
+
+searchInput.addEventListener('input', function () {
+const searchText = this.value.trim().toLowerCase();
+
+patientItems.forEach(function (item) {
+const patientName = item.querySelector('span:first-child').textContent.trim().toLowerCase();
+if (patientName.includes(searchText)) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+		</script>
+	{% endblock %}
+
+{% endblock %}

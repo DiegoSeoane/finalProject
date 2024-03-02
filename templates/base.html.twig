@@ -15,66 +15,55 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
-	<div class="container-fluid m-0 mb-5 px-0">
-		<header class="p-4 bg-info text-white m-0 w-100">
+	<div class="container-fluid m-0 mb-3 px-0">
+		<header class="p-4 bg-dark text-white m-0 w-100">
 			<div class="container-fluid m-0">
 				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-					<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+					<a href="/homepage" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
 						<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
 					</a>
-
-					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">										
 						<li>
 							<a href="/" class="nav-link px-2 text-secondary">Home</a>
 						</li>
 						<li>
-							<a href="/homepage" class="nav-link px-2 text-white">Specialities</a>
+							<a href="/specialities" class="nav-link px-2 text-white">Specialities</a>
 						</li>
 						<li>
 							<a href="/patientlist" class="nav-link px-2 text-white">Patients</a>
 						</li>
 						<li>
-					</ul>
-
-					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-						<input type="search" class="form-control form-control-dark" placeholder="Search by name" aria-label="Search">
-					</form>
-
-					<div class="text-end">
-						<button type="button" class="btn btn-outline-light me-2">Login</button>
-						<button type="button" class="btn btn-dark">Sign-up</button>
-					</div>
+					</ul>		
 				</div>
 			</div>
 		</header>
 	</div>
-	<div class="container fixed-bottom">
-		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+	<div class="w-100 container-fluid fixed-bottom bg-dark m-0 mt-2">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-1 my-4 border-top w-100">
 			<div class="col-md-4 d-flex align-items-center">				
-				<span class="mb-3 mb-md-0 text-body-secondary">&copy; Central Hospital Baroja, Fake Street 123</span>
+				<span class="mb-3 mb-md-0 text-light">&copy; Central Hospital Baroja, Fake Street 123</span>
 			</div>
-
 			<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-				<li class="ms-3">
-					<a class="text-body-secondary" href="#">
-						<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.es%2Ficono-gratis%2Flogotipo-de-twitter_3938028&psig=AOvVaw1kyiZFvE4tBbqL2iTGiF_u&ust=1709296340631000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjAkZvH0IQDFQAAAAAdAAAAABAE" alt="Twitter"><use xlink:href=""/></img>
+				<li class="ms-3 ">
+					<a class="text-light" href="#">
+						Twitter
 					</a>
 				</li>
 				<li class="ms-3">
-					<a class="text-body-secondary" href="#">
-						<img src="" alt="Instagram"></img>
+					<a class="text-light" href="#">
+						Instagram
 					</a>
 				</li>
 				<li class="ms-3">
-					<a class="text-body-secondary" href="#">
-						<img src="" alt="Facebook"></img>
+					<a class="text-light" href="#">
+						Facebook
 					</a>
 				</li>
 			</ul>
 		</footer>
 	</div>
 
-	<body>
+	<body style="background-image: url('./images/fondo.jpeg'); background-size: cover;">
 		{% block body %}{% endblock %}        
 	</body>
 </html>
