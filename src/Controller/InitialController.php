@@ -19,7 +19,7 @@ class InitialController extends AbstractController
     // public function iniciarArraySpeciality(EntityManagerInterface $entityManager)
     // {        
         
-    //     $array = ['Neurology', 'Ophtalmology', 'Otorhinolaryngology', 'Psychology', 'Psychiatry'];
+    //     $array = ['Neurology', 'Cardiology','Ophtalmology', 'Otorhinolaryngology', 'Psychology', 'Psychiatry'];
     //     foreach ($array as $name) {            
     //       $speciality = new Speciality;          
     //       $speciality->setSpecialityName($name);
@@ -35,13 +35,13 @@ class InitialController extends AbstractController
     // {
         
     //     $arrayPatient = [['name'=>'Adolfo', 'surname'=>'Gilbert', 'address'=>'Fake Street 321', 'speciality'=>1],
-    //     ['name'=>'Maria', 'surname'=>'Martinez', 'address'=>'Main Street 123', 'speciality'=>2],
-    //     ['name'=>'Juan', 'surname'=>'Perez', 'address'=>'Oak Avenue 456', 'speciality'=>1],
+    //     ['name'=>'Julius', 'surname'=>'Tomorrow', 'address'=>'The Pine 123', 'speciality'=>1],
+    //     ['name'=>'Juan', 'surname'=>'Perez', 'address'=>'Oak Avenue 456', 'speciality'=>2],
     //     ['name'=>'Luisa', 'surname'=>'Gomez', 'address'=>'Elm Street 789', 'speciality'=>5],
     //     ['name'=>'Pedro', 'surname'=>'Sanchez', 'address'=>'Cedar Road 1011', 'speciality'=>2],
-    //     ['name'=>'Ana', 'surname'=>'Rodriguez', 'address'=>'Maple Lane 1213', 'speciality'=>1],
+    //     ['name'=>'Ana', 'surname'=>'Rodriguez', 'address'=>'Maple Lane 1213', 'speciality'=>4],
     //     ['name'=>'Carlos', 'surname'=>'Lopez', 'address'=>'Pine Street 1415', 'speciality'=>4],
-    //     ['name'=>'Laura', 'surname'=>'Hernandez', 'address'=>'Birch Avenue 1617', 'speciality'=>2],
+    //     ['name'=>'Laura', 'surname'=>'Hernandez', 'address'=>'Birch Avenue 1617', 'speciality'=>6],
     //     ['name'=>'Diego', 'surname'=>'Diaz', 'address'=>'Willow Road 1819', 'speciality'=>1],
     //     ['name'=>'Sofia', 'surname'=>'Torres', 'address'=>'Cypress Lane 2021', 'speciality'=>3],
     //     ['name'=>'Javier', 'surname'=>'Ramirez', 'address'=>'Fir Street 2223', 'speciality'=>2],
@@ -50,11 +50,11 @@ class InitialController extends AbstractController
     //     ['name'=>'Marta', 'surname'=>'Gutierrez', 'address'=>'Ash Road 2829', 'speciality'=>2],
     //     ['name'=>'Roberto', 'surname'=>'Jimenez', 'address'=>'Hickory Lane 3031', 'speciality'=>5],
     //     ['name'=>'Alejandra', 'surname'=>'Ruiz', 'address'=>'Spruce Street 3233', 'speciality'=>4],
-    //     ['name'=>'Raul', 'surname'=>'Alvarez', 'address'=>'Chestnut Avenue 3435', 'speciality'=>2],
+    //     ['name'=>'Raul', 'surname'=>'Alvarez', 'address'=>'Chestnut Avenue 3435', 'speciality'=>6],
     //     ['name'=>'Patricia', 'surname'=>'Castillo', 'address'=>'Poplar Drive 3637', 'speciality'=>1],
     //     ['name'=>'Fernando', 'surname'=>'Gonzalez', 'address'=>'Beech Road 3839', 'speciality'=>5],
     //     ['name'=>'Carmen', 'surname'=>'Flores', 'address'=>'Linden Lane 4041', 'speciality'=>2],
-    //     ['name'=>'Rosa', 'surname'=>'Ortega', 'address'=>'Walnut Street 4243', 'speciality'=>1],
+    //     ['name'=>'Rosa', 'surname'=>'Ortega', 'address'=>'Walnut Street 4243', 'speciality'=>6],
     //     ['name'=>'Antonio', 'surname'=>'Santos', 'address'=>'Dogwood Drive 4445', 'speciality'=>3],
     //     ['name'=>'Isabel', 'surname'=>'Reyes', 'address'=>'Mulberry Lane 4647', 'speciality'=>4],
     //     ['name'=>'Pablo', 'surname'=>'Nunez', 'address'=>'Holly Avenue 4849', 'speciality'=>1],
@@ -90,15 +90,5 @@ class InitialController extends AbstractController
     // }
     //         $entityManager->flush();                     
     //     return new Response('Datos engadidos');
-    // }
-    // #[Route('/', name: 'app_initial')]
-    // public function crearUsuario(EntityManagerInterface $entityManager)
-    // {        
-    //     $user = new User();
-    //     $user->setUsername('admin');
-    //     $user->setPassword('abc123.');
-    //     $entityManager->persist($user);
-    //     $entityManager->flush();
-    //     return new Response('Usuario engadido');
     // }
 }

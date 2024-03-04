@@ -6,7 +6,6 @@
   <li class="list-group-item active text-center display-5" aria-current="true">{{SpecName}}</li>
     {% for patient in patientlist %}
         {% if patient.speciality.getSpecialityName() == SpecName %}            
-            
   <li class="list-group-item text-center p-3"><a href="/patient/{{patient.id}}" class="text-decoration-none"><span><b>Name: </b>{{patient.name}} {{patient.surname}}</span>
 					<span><b>Address: </b>{{patient.address}}</span></a></li>
 
