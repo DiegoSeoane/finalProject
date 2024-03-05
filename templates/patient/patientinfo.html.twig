@@ -3,16 +3,16 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block body %}
-<div class="container-fluid text-center">
+<div class="container-fluid text-center card bg-dark text-light"  style="width:500px">
 {% for patient in patientlist %}
     {% if patient.id == id %}
         <h1 class="display-3">{{patient.name}} {{patient.surname}}</h1>
-        <img class="img-fluid rounded" style="width:300px" src="https://thispersondoesnotexist.com/" alt="ProfileImage">
+        <img class="img-fluid rounded mx-auto" style="width:300px" src="https://thispersondoesnotexist.com/" alt="ProfileImage">
         <br>
         <br>
         <h3>Address: {{patient.address}}</h3>
         <h5>Patient in {{patient.speciality.getSpecialityName()}}</h5>
-        <a href="modify/{{patient.id}}" class="btn bg-dark text-light">Modify info...</a>
+        <a href="modify/{{patient.id}}" class="btn bg-dark text-light my-2 border-light mx-auto">Modify info...</a>
     {% endif %}
 {% endfor %}
 
