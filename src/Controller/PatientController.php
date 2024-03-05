@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Patient;
 use App\Repository\PatientRepository;
 use App\Repository\SpecialityRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -68,6 +69,41 @@ class PatientController extends AbstractController
         return $this->render('patient/modifypatient.html.twig', [
             'slug' => $slug,
             'patient' => $patient,
+        ]);
+    }
+    #[Route('/patientlist/addpatient', name: 'addpatient')]
+    public function addpatient(EntityManagerInterface $entityManager, SpecialityRepository $specialityRepository, Request $request): Response
+    {
+        $patient = new Patient();
+        if (!$patient) { //throw error if patient do not exist
+            throw $this->createNotFoundException('Patient not found');
+        }
+
+        if ($request->isMethod('POST')) {
+
+            $patient->setName($request->request->get('name'));
+            $patient->setSurname($request->request->get('surname'));
+            $patient->setAddress($request->request->get('address'));
+            $specialities = $specialityRepository->findAll();
+            $specialityFound = false;
+            foreach ($specialities as $speciality) {
+                if ($speciality->getSpecialityName() == $request->request->get('speciality')) {
+                    $patient->setSpeciality($speciality);
+                    $specialityFound = true;
+                    break;
+                }
+            }
+
+            if (!$specialityFound) {
+                throw $this->createNotFoundException('Speciality not found');
+            }
+            $entityManager->persist($patient);
+            $entityManager->flush();
+            
+            return $this->redirectToRoute('patientlist');
+        }
+        return $this->render('patient/addpatient.html.twig', [   
+            'patient'=>$patient
         ]);
     }
 }
