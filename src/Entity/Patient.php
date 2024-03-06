@@ -26,6 +26,12 @@ class Patient
     #[ORM\JoinColumn(nullable: false)]
     private ?Speciality $speciality = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $ssn = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $diagnosis = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +81,30 @@ class Patient
     public function setSpeciality(?Speciality $speciality): static
     {
         $this->speciality = $speciality;
+
+        return $this;
+    }
+
+    public function getSsn(): ?string
+    {
+        return $this->ssn;
+    }
+
+    public function setSsn(string $ssn): static
+    {
+        $this->ssn = $ssn;
+
+        return $this;
+    }
+
+    public function getDiagnosis(): ?string
+    {
+        return $this->diagnosis;
+    }
+
+    public function setDiagnosis(string $diagnosis): static
+    {
+        $this->diagnosis = $diagnosis;
 
         return $this;
     }

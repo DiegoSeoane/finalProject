@@ -45,6 +45,8 @@ class PatientController extends AbstractController
             $patient->setName($request->request->get('name'));
             $patient->setSurname($request->request->get('surname'));
             $patient->setAddress($request->request->get('address'));
+            $patient->setDiagnosis($request->request->get('diagnosis'));
+            $patient->setSsn($request->request->get('ssn'));
             $specialities = $specialityRepository->findAll();
             $specialityFound = false;
             foreach ($specialities as $speciality) {
@@ -84,6 +86,8 @@ class PatientController extends AbstractController
             $patient->setName($request->request->get('name'));
             $patient->setSurname($request->request->get('surname'));
             $patient->setAddress($request->request->get('address'));
+            $patient->setDiagnosis($request->request->get('diagnosis'));
+            $patient->setSsn($request->request->get('ssn'));
             $specialities = $specialityRepository->findAll();
             $specialityFound = false;
             foreach ($specialities as $speciality) {

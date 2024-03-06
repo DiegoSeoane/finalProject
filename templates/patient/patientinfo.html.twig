@@ -11,7 +11,9 @@
         <br>
         <br>
         <h3>Address: {{patient.address}}</h3>
-        <h5>Patient in {{patient.speciality.getSpecialityName()}}</h5>
+        <h3>SSN: {{patient.ssn}}</h3>
+        <h5>{{patient.speciality.getSpecialityName()}} patient with diagnosis:</h5>
+        <h5>{{patient.diagnosis}}</h5>
         <a href="modify/{{patient.id}}" class="btn bg-dark text-light my-2 border-light mx-auto">Modify info...</a>
     {% endif %}
 {% endfor %}
