@@ -29,7 +29,7 @@ class InitialController extends AbstractController
     //     $entityManager->flush(); 
     //     return new Response('Datos engadidos');
     // }
-// Uncomment this after flush specialities
+// Uncomment this after flush specialities and comment the previous again, do the same after flush this one
     // #[Route('/', name: 'app_initial')]
     // public function iniciarArraySpeciality(SpecialityRepository $specialityRepository, EntityManagerInterface $entityManager)
     // {
